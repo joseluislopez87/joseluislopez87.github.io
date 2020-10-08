@@ -1,0 +1,119 @@
+/* GLOBAL VARIABLES */
+:root {
+  --min-width: 355px;
+  --green: #b5e6a2;
+  --green-active: #18d26e;
+  --black-trans: rgba(0, 0, 0, 0.9);
+}
+.shadowed {
+  -webkit-filter: drop-shadow(-5px 5px 5px #111);
+  filter: drop-shadow(-5px 5px 5px #111);
+}
+
+.spacer {
+  margin-top: 5em;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section {
+  padding-bottom: 3em;
+}
+
+.section-header h3 {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 2vh;
+  padding-top: 5vh;
+}
+
+.section-header h3::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: #bbb;
+  bottom: 1px;
+  left: calc(50% - 100px);
+}
+.section-header h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--green-active);
+  bottom: 0;
+  left: calc(50% - 30px);
+}
+
+.section-header p {
+  text-align: center;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #666666;
+  font-family: "Open Sans", sans-serif;
+  
+  .cc-revoke.cc-bottom{
+    left: 0;
+    transform: none !important;
+    border-top: solid 1px var(--green-active);
+    border-right: solid 1px var(--green-active);
+    text-decoration: none;
+    i{
+      pointer-events: none;
+    }
+  }
+  
+  .cc-window {
+    z-index: 9998;
+    .cc-compliance {
+      .cc-allow:hover{
+        background-color: green;
+        text-decoration: none;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.nanogallery_gallerytheme_custom_nanogallery-photos .nGY2NavFilterSelectAll{
+  color: #222 !important;
+  border: solid 1px var(--green-active);
+  
+  .nGY2Icon-ccw{
+    font-family: "Open Sans", sans-serif;
+  }
+  .nGY2Icon-ccw:after{
+    content: ' Todas';
+  }
+}
