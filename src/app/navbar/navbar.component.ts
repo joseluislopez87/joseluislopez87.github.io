@@ -39,18 +39,14 @@ export class NavbarComponent implements OnInit {
       else if (!(window.pageYOffset > 50)) $(".navbar").removeClass("scrolled");
     });
 
-    $('a[href*="#"]')
-      // Remove links that don't actually link to anything
-      .not('[href="#"]')
-      .not('[href="#0"]')
-      .not('[href="#cookie"]')
-      .not('[href="#legal"]')
+     $(".scroll-link")
       .on('click', function (event) {
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
           var hash = this.hash;
           var scrollOffset = $(hash).data("scroll-offset") || 60;
           $('html, body').animate({ scrollTop: $(hash).offset().top - scrollOffset }, 1200, 'easeInOutExpo');
+          history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
           return false;
         }
       });
