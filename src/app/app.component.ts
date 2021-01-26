@@ -3,6 +3,7 @@ import { NgcCookieConsentService, NgcStatusChangeEvent } from 'ngx-cookieconsent
 import { Subscription } from 'rxjs';
 import { faEnvelope as faCookie } from '@fortawesome/free-solid-svg-icons';
 import { environment } from 'src/environments/environment';
+import { fadeAnimation } from './shared/animations';
 
 declare var $: any;
 declare var gtag: any;
@@ -10,7 +11,8 @@ declare var gtag: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation]
 })
 export class AppComponent implements OnInit, OnDestroy {
 

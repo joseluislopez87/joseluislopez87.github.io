@@ -20,6 +20,8 @@ import { ServicesComponent } from './services/services.component';
 import { ReplaceSpacesURL } from './shared/pipe/ReplaceSpacesURL';
 import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
 import { LegalComponent } from './legal/legal.component';
+import { DashboardComponent } from './user/dashboard/dashboard.component';
+import { HomeComponent } from './home/home.component';
 
 const cookieConfig:NgcCookieConsentConfig = {
   cookie: {
@@ -60,7 +62,9 @@ const cookieConfig:NgcCookieConsentConfig = {
     TariffComponent,
     ReplaceSpacesURL,
     CookiePolicyComponent,
-    LegalComponent
+    LegalComponent,
+    DashboardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
